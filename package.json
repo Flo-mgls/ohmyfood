@@ -1,0 +1,20 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "entreprise de réservation de restaurants et de composition de menus en ligne",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:./css/style.css",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flo-mgls/ohmyfood.git"
+  },
+  "author": "Florian Magalhaes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Flo-mgls/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/Flo-mgls/ohmyfood#readme"
+}
