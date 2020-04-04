@@ -1,0 +1,341 @@
+@charset "UTF-8";
+/*map - breakpoints*/
+/*header and footer - BG and font colors*/
+/*font size of resto and "menu" words in home page*/
+/*font of the restorants name*/
+/*font of the "menu" word*/
+/*BG color of different menus in home page*/
+/*font color of the word "menu" in home page*/
+/*font color of the restorants name in home page*/
+/*map - colors of each menus in home page*/
+/*mixin for mobile only*/
+/*main look - header and footer and soon*/
+/*look of each menus in home page - colors and font size*/
+/*La note enchantée*/
+@font-face {
+  font-family: "devonshire";
+  src: url("../contents/fonts/devonshire/Devonshire-Regular.ttf");
+}
+/*Le chic à la française*/
+@font-face {
+  font-family: "croissant one";
+  src: url("../contents/fonts/croissant_one/CroissantOne-Regular.ttf");
+}
+/*Le délice des papilles*/
+@font-face {
+  font-family: "dancing script";
+  src: url("../contents/fonts/dancing_script/static/DancingScript-Regular.ttf");
+}
+/*La palette du goût + all "menu" - "menu"Le chic à la française */
+@font-face {
+  font-family: "handlee";
+  src: url("../contents/fonts/handlee/Handlee-Regular.ttf");
+}
+body {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+h3 {
+  text-align: center;
+}
+
+header {
+  background-color: #679a88;
+  color: #fbc138;
+  font: 2.2em Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+@media all and (max-width: 767px) {
+  header {
+    font-size: 1.5em;
+  }
+}
+header h1 {
+  margin: 0;
+  padding: 0.3em;
+}
+
+@keyframes wiggle {
+  1% {
+    transform: translateX(-3%);
+  }
+  3% {
+    transform: translateX(3%);
+  }
+  5% {
+    transform: translateX(-3%);
+  }
+  7% {
+    transform: translateX(3%);
+  }
+  8%, 100% {
+    transform: translateX(0%);
+  }
+}
+footer {
+  background-color: #679a88;
+  color: #fbc138;
+  font: 1.4em Arial, Helvetica, sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+@media all and (max-width: 767px) {
+  footer {
+    font-size: 1em;
+  }
+}
+footer p {
+  animation: wiggle 3000ms infinite;
+  padding: 0.7em;
+  margin: 0;
+}
+
+@keyframes patience {
+  0% {
+    transform: translateY(50%);
+  }
+  25% {
+    transform: translateY(-75%);
+  }
+  50%, 100% {
+    transform: translateY(50%);
+  }
+}
+.all-menus {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 3em;
+  grid-row-gap: 3em;
+  grid-auto-rows: 500px;
+  padding: 3em 5em 3em 5em;
+}
+@media all and (max-width: 767px) {
+  .all-menus {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 300px;
+    padding: 3em;
+  }
+}
+.all-menus section {
+  box-shadow: 0px 0px 10px grey;
+}
+.all-menus section a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.all-menus section a div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.all-menus section a div > div {
+  transition: transform 400ms ease-in-out, opacity 300ms 100ms;
+}
+.all-menus section a div > div:hover {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+.all-menus section a div.menu-note {
+  background-color: #f7e0dc;
+}
+.all-menus section a div.menu-note h2 {
+  font: 2em "devonshire", cursive;
+  border: 1px solid #f7e0dc;
+  /*fix the problem of grandient bg (border visible)*/
+  background: black;
+  background-color: transparent;
+  /*if gradient text not supported*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: initial;
+}
+@media all and (max-width: 767px) {
+  .all-menus section a div.menu-note h2 {
+    font-size: 1.3em;
+  }
+}
+.all-menus section a div.menu-note h3 {
+  font: italic 2.5em "handlee", cursive;
+  color: black;
+}
+@media all and (max-width: 767px) {
+  .all-menus section a div.menu-note h3 {
+    font-size: 1.8em;
+  }
+}
+.all-menus section a div.menu-chic {
+  background-color: #fdf5fd;
+}
+.all-menus section a div.menu-chic h2 {
+  font: 2em "croissant one", cursive;
+  border: 1px solid #fdf5fd;
+  /*fix the problem of grandient bg (border visible)*/
+  background: linear-gradient(135deg, #cd8841 0%, #8861f4 100%);
+  background-color: transparent;
+  /*if gradient text not supported*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media all and (max-width: 767px) {
+  .all-menus section a div.menu-chic h2 {
+    font-size: 1.3em;
+  }
+}
+.all-menus section a div.menu-chic h3 {
+  font: 2.5em "Times New Roman", Times, serif;
+  color: #bc772f;
+}
+@media all and (max-width: 767px) {
+  .all-menus section a div.menu-chic h3 {
+    font-size: 1.8em;
+  }
+}
+.all-menus section a div.menu-delice {
+  background-color: #f9f9f9;
+}
+.all-menus section a div.menu-delice h2 {
+  font: 2em "dancing script", cursive;
+  border: 1px solid #f9f9f9;
+  /*fix the problem of grandient bg (border visible)*/
+  background: linear-gradient(144deg, #0b36d6 0%, #3987f3 100%);
+  background-color: transparent;
+  /*if gradient text not supported*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media all and (max-width: 767px) {
+  .all-menus section a div.menu-delice h2 {
+    font-size: 1.3em;
+  }
+}
+.all-menus section a div.menu-delice h3 {
+  font: italic 2.5em "handlee", cursive;
+  color: #3987f3;
+}
+@media all and (max-width: 767px) {
+  .all-menus section a div.menu-delice h3 {
+    font-size: 1.8em;
+  }
+}
+.all-menus section a div.menu-palette {
+  background-color: #fdfffd;
+}
+.all-menus section a div.menu-palette h2 {
+  font: italic 2em "handlee", cursive;
+  border: 1px solid #fdfffd;
+  /*fix the problem of grandient bg (border visible)*/
+  background: linear-gradient(144deg, #599548 0%, #cdfc8e 100%);
+  background-color: transparent;
+  /*if gradient text not supported*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media all and (max-width: 767px) {
+  .all-menus section a div.menu-palette h2 {
+    font-size: 1.3em;
+  }
+}
+.all-menus section a div.menu-palette h3 {
+  font: italic 2.5em "handlee", cursive;
+  color: #84bc62;
+}
+@media all and (max-width: 767px) {
+  .all-menus section a div.menu-palette h3 {
+    font-size: 1.8em;
+  }
+}
+.all-menus section a div > h2 {
+  padding: 0 1em 0 1em;
+  margin: 0em auto 0em auto;
+  /*width: max-content;*/
+  color: black;
+  text-align: center;
+}
+.all-menus section a div > img {
+  margin: 0 auto 0.5em auto;
+  width: 4em;
+  height: 4em;
+}
+.all-menus + div {
+  background-color: #679a88;
+  color: #fbc138;
+  font: 2em Arial, Helvetica, sans-serif;
+  text-align: center;
+  width: max-content;
+  padding: 0.3em 1.5em;
+  border-radius: 0.5em;
+  margin: 0.5em auto 4em auto;
+  display: flex;
+  align-items: center;
+}
+@media all and (max-width: 767px) {
+  .all-menus + div {
+    font-size: 1.5em;
+  }
+}
+.all-menus + div > p {
+  margin: 0 0.3em 0 0;
+}
+.all-menus + div > div {
+  background-color: #fbc138;
+  border-radius: 1em;
+  width: 0.3em;
+  height: 0.3em;
+  margin: 0 0.2em 0 0.2em;
+}
+.all-menus + div > div.point {
+  animation: patience 2000ms backwards infinite ease-in-out;
+}
+.all-menus + div > div.point--1 {
+  animation-delay: 150ms;
+}
+.all-menus + div > div.point--2 {
+  animation-delay: 300ms;
+}
+.all-menus + div > div.point--3 {
+  animation-delay: 450ms;
+}
+
+.menu-page__heading {
+  font: bold 2em Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.menu-page .menu-card {
+  background-color: #f7e0dc;
+  padding: 3em 3em 3em 3em;
+  margin: 0 3em 3em 3em;
+}
+.menu-page .menu-card__music-note {
+  margin-left: auto;
+  margin-right: auto;
+  width: 4em;
+  height: 4em;
+}
+.menu-page .menu-card h2 {
+  font: 2em "devonshire", cursive;
+  text-align: center;
+}
+.menu-page .menu-card .flex {
+  display: flex;
+  justify-content: space-between;
+}
+.menu-page .menu-card .flex h3 {
+  font: italic 2.5em "handlee", cursive;
+}
+.menu-page .menu-card .flex p {
+  font: italic 2.5em "handlee", cursive;
+  font-size: 1em;
+}
+
+/*# sourceMappingURL=style.css.map */

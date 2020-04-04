@@ -4,7 +4,7 @@
   "description": "entreprise de réservation de restaurants et de composition de menus en ligne",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/style.scss:./css/style.css",
+    "sass": "sass --watch ./sass/main.scss:./css/style.css",
     "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
   },
   "repository": {
