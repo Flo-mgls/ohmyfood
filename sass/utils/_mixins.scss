@@ -1,0 +1,101 @@
+/*mixin for mobile only and tablet*/
+@mixin mobile-only($device: mobile){
+	@media all and (max-width: map-get($breakpoints, $device)){
+		@content;
+	}
+}
+/*main look - header and footer and soon*/
+@mixin main-look($font-size: initial, $text-align: center){
+	background-color: $main-bg;
+	color: $main-font;
+	font: $font-size $main-ff;
+	text-align: $text-align;
+}
+/*look of each menus in home page - colors and font size*/
+@mixin menu-look-home($map){
+	@each $key, $value in $map{
+		&#{$key}{
+			background-color: map-get($value, bg);
+			h2{
+				font: map-get($value, ff-resto);
+				border: 1px solid map-get($value, bg); /*fix the problem of grandient bg (border visible)*/
+				background: map-get($value, gradient-bg-color);
+				background-color: transparent; /*if gradient text not supported*/
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: map-get($value, gradient-fill-color);
+				@include mobile-only{
+					font-size: $mob-resto-font-size;
+				}
+			}
+			h3{
+				font: map-get($value, ff-menu);
+				color: map-get($value, menu-color);
+				@include mobile-only{
+					font-size: $mob-menu-font-size;
+				}
+			}
+		}
+	}
+}
+/*look of each menus for their own page*/
+@mixin menu-look($resto){
+	$map: map-get($menu-color, $resto);
+	.menu-card{
+		background-color: map-get($map, bg);
+		box-shadow: 0px 0px 10px grey;
+		padding: 5em;
+		margin: 0 5em 7em 5em;
+		@include mobile-only{
+			margin: 0 1em 5em 1em;
+			padding: 1em 1em 3em 1em;
+		}
+		h2{
+			font: map-get($map, ff-resto);
+			font-size: 3em;
+			text-align: center;
+			margin-top: 0;
+		}
+		.flex{
+			display: flex;
+			justify-content: space-between;
+			@include mobile-only{
+				flex-direction: column;
+				text-align: center;
+			}
+			img{
+				width: auto;
+				overflow: hidden;
+				margin: 1em 0;
+			}
+			h3{
+				font: bold map-get($map, ff-menu);
+				font-size: 1.5em;
+				margin: 0 2em;
+				position: relative;
+				&:after{
+					content: '';
+					position: absolute;
+					width: 0;
+					height: 2px;
+					display: block;
+					margin-top: 5px;
+					right: 0;
+					background: $underlined-dish;
+					transition: width 500ms ease;
+				}
+				&:hover:after{
+					width: 100%;
+					left: 0;
+					background: $underlined-dish;
+				}
+			}
+			p{
+				font: map-get($map, ff-menu);
+				font-size: 1em;
+				@include mobile-only{
+					margin: 1em auto 0 auto;
+				}
+			}
+		}
+	}
+}

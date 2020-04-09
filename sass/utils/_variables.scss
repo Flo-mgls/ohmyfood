@@ -1,0 +1,80 @@
+/*map - breakpoints*/
+$breakpoints: (
+	mobile: 767px,
+	tablet: 992px
+	);
+/*header and footer - BG and font colors*/
+$main-bg: rgb(103, 154, 136);
+$main-font: rgb(251, 193, 56);
+$main-ff: Arial, Helvetica, sans-serif;
+/*font size of resto and "menu" words in home page*/
+$resto-font-size: 2em;
+$menu-font-size: 2.5em;
+$mob-resto-font-size: $resto-font-size - 0.7;
+$mob-menu-font-size: $menu-font-size - 0.7;
+/*font of the restorants name*/
+$ff-resto-note: $resto-font-size "devonshire", cursive;
+$ff-resto-chic: $resto-font-size "croissant one", cursive;
+$ff-resto-delice: $resto-font-size "dancing script", cursive;
+$ff-resto-palette: italic $resto-font-size "handlee", cursive;
+/*font of the "menu" word*/
+$ff-menu-note: italic $menu-font-size "handlee", cursive;
+$ff-menu-chic: $menu-font-size "Times New Roman", Times, serif;
+$ff-menu-delice: italic $menu-font-size "handlee", cursive;
+$ff-menu-palette: italic $menu-font-size "handlee", cursive;
+/*BG color of different menus in home page*/
+$bg-note: rgb(247, 224, 220);
+$bg-chic: rgb(253, 245, 253);
+$bg-delice: rgb(249, 249, 249);
+$bg-palette: rgb(253, 255, 253);
+/*font color of the word "menu" in home page*/
+$menu-color-note: rgb(0, 0, 0);
+$menu-color-chic: rgb(188, 119, 47);
+$menu-color-delice: rgb(57, 135, 243);
+$menu-color-palette: rgb(132, 188, 98);
+/*font color of the restorants name in home page*/
+$resto-color-note: rgb(0, 0, 0);
+$resto-color-chic: linear-gradient(135deg, rgba(205,136,65,1) 0%, rgba(136,97,244,1) 100%);
+$resto-color-delice: linear-gradient(144deg, rgba(11,54,214,1) 0%, rgba(57,135,243,1) 100%);
+$resto-color-palette: linear-gradient(144deg, rgba(89,149,72,1) 0%, rgba(205,252,142,1) 100%);
+/*color for each paragraphs of the menu page of resto chic*/
+$color-menu-chic-1: rgb(187, 119, 46);
+$color-menu-chic-2: rgb(156, 106, 150);
+$color-menu-chic-3: rgb(104, 80, 197);
+/*color of the line under each dishes*/
+$underlined-dish: #B0BEC5;
+/*map - colors of each menus in home page*/
+$menu-color: (
+	note: (
+		bg: $bg-note,
+		menu-color: $menu-color-note,
+		gradient-bg-color: $resto-color-note,
+		gradient-fill-color: initial,
+		ff-resto: $ff-resto-note,
+		ff-menu: $ff-menu-note,
+		),
+	chic: (
+		bg: $bg-chic,
+		menu-color: $menu-color-chic,
+		gradient-bg-color: $resto-color-chic,
+		gradient-fill-color: transparent,
+		ff-resto: $ff-resto-chic,
+		ff-menu: $ff-menu-chic,
+		),
+	delice: (
+		bg: $bg-delice,
+		menu-color: $menu-color-delice,
+		gradient-bg-color: $resto-color-delice,
+		gradient-fill-color: transparent,
+		ff-resto: $ff-resto-delice,
+		ff-menu: $ff-menu-delice,
+		),
+	palette: (
+		bg: $bg-palette,
+		menu-color: $menu-color-palette,
+		gradient-bg-color: $resto-color-palette,
+		gradient-fill-color: transparent,
+		ff-resto: $ff-resto-palette,
+		ff-menu: $ff-menu-palette,
+		)
+	);

@@ -1,0 +1,34 @@
+/*La note enchantée*/
+@font-face{
+	font-family: "devonshire";
+	src: url("../contents/fonts/devonshire/Devonshire-Regular.ttf");
+}
+/*Le chic à la française*/
+@font-face{
+	font-family: "croissant one";
+	src: url("../contents/fonts/croissant_one/CroissantOne-Regular.ttf");
+}
+/*Le délice des papilles*/
+@font-face{
+	font-family: "dancing script";
+	src: url("../contents/fonts/dancing_script/static/DancingScript-Regular.ttf");
+}
+/*La palette du goût + all "menu" - "menu"Le chic à la française */
+@font-face{
+	font-family: "handlee";
+	src: url("../contents/fonts/handlee/Handlee-Regular.ttf");
+}
+body{
+	margin: 0;
+}
+a{
+	color: inherit;
+	text-decoration: inherit;
+}
+h3{
+	text-align: center;
+}
+.policy{
+	text-align: center;
+	padding-bottom: 5em;
+}

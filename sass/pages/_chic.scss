@@ -1,0 +1,27 @@
+.menu-page{	
+	&--chic{
+		@include menu-look(chic);
+		.menu-card {
+			h2{
+				background: $resto-color-chic;
+				background-color: transparent; /*if gradient text not supported*/
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+			&--color1{
+				color: $color-menu-chic-1;
+			}
+			&--color2{
+				color: $color-menu-chic-2;
+			}
+			&--color3{
+				color: $color-menu-chic-3;
+			}
+		}
+	}
+	&__heading{
+		font: bold 2em $main-ff;
+		text-align: center;
+	}
+
+}

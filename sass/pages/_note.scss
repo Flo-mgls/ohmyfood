@@ -1,0 +1,31 @@
+.menu-page{
+	&--note{
+		@include menu-look(note);
+	}
+	&__heading{
+		font: bold 2em $main-ff;
+		text-align: center;
+	}
+	.menu-card{
+		&__music-note{
+			display: block;
+			margin: 0 auto 0 auto;
+			width: 4em;
+			height: 4em;
+		}
+		&__bottom-heading{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 4em;
+			font: $ff-resto-note;
+			font-size: 0.8em;
+			img{
+				margin: 0 1em 0 0;
+			}
+			h2{
+				margin: 0;
+			}
+		}
+	}
+}

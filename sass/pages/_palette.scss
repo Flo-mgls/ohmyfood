@@ -1,0 +1,17 @@
+.menu-page{	
+	&--palette{
+		@include menu-look(palette);
+		.menu-card {
+			h2{
+				background: $resto-color-palette;
+				background-color: transparent; /*if gradient text not supported*/
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+	}
+	&__heading{
+		font: bold 2em $main-ff;
+		text-align: center;
+	}
+}
