@@ -1,0 +1,9 @@
+.menu-page{
+	&__heading{
+		font: bold 2em $main-ff;
+		text-align: center;
+	}
+	ul{
+		padding: 0;
+	}
+}

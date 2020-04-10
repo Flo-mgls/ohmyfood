@@ -21,12 +21,14 @@
 body{
 	margin: 0;
 }
+main{
+	max-width: 1080px;
+	margin-right: auto;
+	margin-left: auto;
+}
 a{
 	color: inherit;
 	text-decoration: inherit;
-}
-h3{
-	text-align: center;
 }
 .policy{
 	text-align: center;

@@ -18,11 +18,11 @@
 			background-color: map-get($value, bg);
 			h2{
 				font: map-get($value, ff-resto);
-				border: 1px solid map-get($value, bg); /*fix the problem of grandient bg (border visible)*/
+				border: 1px solid map-get($value, bg); /*fix the problem of grandient bg when hover (border visible)*/
 				background: map-get($value, gradient-bg-color);
 				background-color: transparent; /*if gradient text not supported*/
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: map-get($value, gradient-fill-color);
+				background-clip: text;
+				text-fill-color: map-get($value, gradient-fill-color);
 				@include mobile-only{
 					font-size: $mob-resto-font-size;
 				}
@@ -30,6 +30,7 @@
 			h3{
 				font: map-get($value, ff-menu);
 				color: map-get($value, menu-color);
+				text-align: center;
 				@include mobile-only{
 					font-size: $mob-menu-font-size;
 				}
@@ -70,6 +71,7 @@
 			h3{
 				font: bold map-get($map, ff-menu);
 				font-size: 1.5em;
+				text-align: center;
 				margin: 0 2em;
 				position: relative;
 				&:after{
@@ -98,4 +100,11 @@
 			}
 		}
 	}
+}
+/*gradient color for resto name for each menu card*/
+@mixin gradient-color($resto-color){
+	background: $resto-color;
+	background-color: transparent; /*if gradient text not supported*/
+	background-clip: text;
+	text-fill-color: transparent;
 }

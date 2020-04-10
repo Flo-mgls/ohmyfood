@@ -3,15 +3,8 @@
 		@include menu-look(delice);
 		.menu-card {
 			h2{
-				background: $resto-color-delice;
-				background-color: transparent; /*if gradient text not supported*/
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
+				@include gradient-color($resto-color-delice);
 			}
 		}
-	}
-	&__heading{
-		font: bold 2em $main-ff;
-		text-align: center;
 	}
 }

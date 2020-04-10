@@ -14,6 +14,7 @@
 /*main look - header and footer and soon*/
 /*look of each menus in home page - colors and font size*/
 /*look of each menus for their own page*/
+/*gradient color for resto name for each menu card*/
 /*La note enchantée*/
 @font-face {
   font-family: "devonshire";
@@ -38,13 +39,15 @@ body {
   margin: 0;
 }
 
+main {
+  max-width: 1080px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 a {
   color: inherit;
   text-decoration: inherit;
-}
-
-h3 {
-  text-align: center;
 }
 
 .policy {
@@ -138,143 +141,147 @@ footer p {
     padding: 3em;
   }
 }
-.all-menus section {
+.all-menus article {
   box-shadow: 0px 0px 10px grey;
 }
-.all-menus section a {
+.all-menus article a {
   display: block;
   width: 100%;
   height: 100%;
 }
-.all-menus section a div {
+.all-menus article a div {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.all-menus section a div > div {
+.all-menus article a div > div {
   transition: transform 400ms ease-in-out, opacity 300ms 100ms;
 }
-.all-menus section a div > div:hover {
+.all-menus article a div > div:hover {
   transform: scale(1.1);
   opacity: 0.7;
 }
-.all-menus section a div.menu-note {
+.all-menus article a div.menu-note {
   background-color: #f7e0dc;
 }
-.all-menus section a div.menu-note h2 {
+.all-menus article a div.menu-note h2 {
   font: 2em "devonshire", cursive;
   border: 1px solid #f7e0dc;
-  /*fix the problem of grandient bg (border visible)*/
+  /*fix the problem of grandient bg when hover (border visible)*/
   background: black;
   background-color: transparent;
   /*if gradient text not supported*/
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: initial;
+  background-clip: text;
+  text-fill-color: initial;
 }
 @media all and (max-width: 767px) {
-  .all-menus section a div.menu-note h2 {
+  .all-menus article a div.menu-note h2 {
     font-size: 1.3em;
   }
 }
-.all-menus section a div.menu-note h3 {
+.all-menus article a div.menu-note h3 {
   font: italic 2.5em "handlee", cursive;
   color: black;
+  text-align: center;
 }
 @media all and (max-width: 767px) {
-  .all-menus section a div.menu-note h3 {
+  .all-menus article a div.menu-note h3 {
     font-size: 1.8em;
   }
 }
-.all-menus section a div.menu-chic {
+.all-menus article a div.menu-chic {
   background-color: #fdf5fd;
 }
-.all-menus section a div.menu-chic h2 {
+.all-menus article a div.menu-chic h2 {
   font: 2em "croissant one", cursive;
   border: 1px solid #fdf5fd;
-  /*fix the problem of grandient bg (border visible)*/
+  /*fix the problem of grandient bg when hover (border visible)*/
   background: linear-gradient(135deg, #cd8841 0%, #8861f4 100%);
   background-color: transparent;
   /*if gradient text not supported*/
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 @media all and (max-width: 767px) {
-  .all-menus section a div.menu-chic h2 {
+  .all-menus article a div.menu-chic h2 {
     font-size: 1.3em;
   }
 }
-.all-menus section a div.menu-chic h3 {
+.all-menus article a div.menu-chic h3 {
   font: 2.5em "Times New Roman", Times, serif;
   color: #bc772f;
+  text-align: center;
 }
 @media all and (max-width: 767px) {
-  .all-menus section a div.menu-chic h3 {
+  .all-menus article a div.menu-chic h3 {
     font-size: 1.8em;
   }
 }
-.all-menus section a div.menu-delice {
+.all-menus article a div.menu-delice {
   background-color: #f9f9f9;
 }
-.all-menus section a div.menu-delice h2 {
+.all-menus article a div.menu-delice h2 {
   font: 2em "dancing script", cursive;
   border: 1px solid #f9f9f9;
-  /*fix the problem of grandient bg (border visible)*/
+  /*fix the problem of grandient bg when hover (border visible)*/
   background: linear-gradient(144deg, #0b36d6 0%, #3987f3 100%);
   background-color: transparent;
   /*if gradient text not supported*/
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 @media all and (max-width: 767px) {
-  .all-menus section a div.menu-delice h2 {
+  .all-menus article a div.menu-delice h2 {
     font-size: 1.3em;
   }
 }
-.all-menus section a div.menu-delice h3 {
+.all-menus article a div.menu-delice h3 {
   font: italic 2.5em "handlee", cursive;
   color: #3987f3;
+  text-align: center;
 }
 @media all and (max-width: 767px) {
-  .all-menus section a div.menu-delice h3 {
+  .all-menus article a div.menu-delice h3 {
     font-size: 1.8em;
   }
 }
-.all-menus section a div.menu-palette {
+.all-menus article a div.menu-palette {
   background-color: #fdfffd;
 }
-.all-menus section a div.menu-palette h2 {
+.all-menus article a div.menu-palette h2 {
   font: italic 2em "handlee", cursive;
   border: 1px solid #fdfffd;
-  /*fix the problem of grandient bg (border visible)*/
+  /*fix the problem of grandient bg when hover (border visible)*/
   background: linear-gradient(144deg, #599548 0%, #cdfc8e 100%);
   background-color: transparent;
   /*if gradient text not supported*/
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 @media all and (max-width: 767px) {
-  .all-menus section a div.menu-palette h2 {
+  .all-menus article a div.menu-palette h2 {
     font-size: 1.3em;
   }
 }
-.all-menus section a div.menu-palette h3 {
+.all-menus article a div.menu-palette h3 {
   font: italic 2.5em "handlee", cursive;
   color: #84bc62;
+  text-align: center;
 }
 @media all and (max-width: 767px) {
-  .all-menus section a div.menu-palette h3 {
+  .all-menus article a div.menu-palette h3 {
     font-size: 1.8em;
   }
 }
-.all-menus section a div > h2 {
+.all-menus article a div > h2 {
   padding: 0 1em 0 1em;
   margin: 0em auto 0em auto;
   color: black;
   text-align: center;
 }
-.all-menus section a div > img {
+.all-menus article a div > img {
   margin: 0 auto 0.5em auto;
   width: 4em;
   height: 4em;
@@ -319,6 +326,14 @@ footer p {
   animation-delay: 450ms;
 }
 
+.menu-page__heading {
+  font: bold 2em Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.menu-page ul {
+  padding: 0;
+}
+
 .menu-page--note .menu-card {
   background-color: #f7e0dc;
   box-shadow: 0px 0px 10px grey;
@@ -355,6 +370,7 @@ footer p {
 .menu-page--note .menu-card .flex h3 {
   font: bold italic 2.5em "handlee", cursive;
   font-size: 1.5em;
+  text-align: center;
   margin: 0 2em;
   position: relative;
 }
@@ -382,10 +398,6 @@ footer p {
   .menu-page--note .menu-card .flex p {
     margin: 1em auto 0 auto;
   }
-}
-.menu-page__heading {
-  font: bold 2em Arial, Helvetica, sans-serif;
-  text-align: center;
 }
 .menu-page .menu-card__music-note {
   display: block;
@@ -444,6 +456,7 @@ footer p {
 .menu-page--chic .menu-card .flex h3 {
   font: bold 2.5em "Times New Roman", Times, serif;
   font-size: 1.5em;
+  text-align: center;
   margin: 0 2em;
   position: relative;
 }
@@ -476,8 +489,8 @@ footer p {
   background: linear-gradient(135deg, #cd8841 0%, #8861f4 100%);
   background-color: transparent;
   /*if gradient text not supported*/
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 .menu-page--chic .menu-card--color1 {
   color: #bb772e;
@@ -487,10 +500,6 @@ footer p {
 }
 .menu-page--chic .menu-card--color3 {
   color: #6850c5;
-}
-.menu-page__heading {
-  font: bold 2em Arial, Helvetica, sans-serif;
-  text-align: center;
 }
 
 .menu-page--delice .menu-card {
@@ -529,6 +538,7 @@ footer p {
 .menu-page--delice .menu-card .flex h3 {
   font: bold italic 2.5em "handlee", cursive;
   font-size: 1.5em;
+  text-align: center;
   margin: 0 2em;
   position: relative;
 }
@@ -561,12 +571,8 @@ footer p {
   background: linear-gradient(144deg, #0b36d6 0%, #3987f3 100%);
   background-color: transparent;
   /*if gradient text not supported*/
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.menu-page__heading {
-  font: bold 2em Arial, Helvetica, sans-serif;
-  text-align: center;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 .menu-page--palette .menu-card {
@@ -605,6 +611,7 @@ footer p {
 .menu-page--palette .menu-card .flex h3 {
   font: bold italic 2.5em "handlee", cursive;
   font-size: 1.5em;
+  text-align: center;
   margin: 0 2em;
   position: relative;
 }
@@ -637,12 +644,8 @@ footer p {
   background: linear-gradient(144deg, #599548 0%, #cdfc8e 100%);
   background-color: transparent;
   /*if gradient text not supported*/
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.menu-page__heading {
-  font: bold 2em Arial, Helvetica, sans-serif;
-  text-align: center;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */

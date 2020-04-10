@@ -2,10 +2,6 @@
 	&--note{
 		@include menu-look(note);
 	}
-	&__heading{
-		font: bold 2em $main-ff;
-		text-align: center;
-	}
 	.menu-card{
 		&__music-note{
 			display: block;
