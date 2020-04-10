@@ -3,7 +3,63 @@
 		font: bold 2em $main-ff;
 		text-align: center;
 	}
-	ul{
-		padding: 0;
+	.menu-card{
+		box-shadow: 0px 0px 10px grey;
+		padding: 5em;
+		margin: 0 5em 7em 5em;
+		@include mobile-only{
+			margin: 0 1em 5em 1em;
+			padding: 1em 1em 3em 1em;
+		}
+		h2{
+			font-size: 3em;
+			text-align: center;
+			margin-top: 0;
+		}
+		.flex{
+			display: flex;
+			justify-content: space-between;
+			@include mobile-only{
+				flex-direction: column;
+				text-align: center;
+			}
+			img{
+				width: auto;
+				overflow: hidden;
+				margin: 1em 0;
+			}
+			h3{
+				font-size: 1.5em;
+				text-align: center;
+				margin: 0 2em;
+				position: relative;
+				&:after{
+					content: '';
+					position: absolute;
+					width: 0;
+					height: 2px;
+					display: block;
+					margin-top: 5px;
+					right: 0;
+					background: $underlined-dish;
+					transition: width 500ms ease;
+				}
+				&:hover:after{
+					width: 100%;
+					left: 0;
+					background: $underlined-dish;
+				}
+			}
+			ul{
+				padding: 0;
+			}
+			p{
+				font-size: 1em;
+				@include mobile-only{
+					margin: 1em auto 0 auto;
+				}
+			}
+
+		}
 	}
 }
