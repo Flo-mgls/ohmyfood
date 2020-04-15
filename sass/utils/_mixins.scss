@@ -21,7 +21,7 @@
 				border: 1px solid map-get($value, bg); /*fix the problem of grandient bg when hover (border visible)*/
 				background: map-get($value, gradient-bg-color);
 				background-color: transparent; /*if gradient text not supported*/
-				background-clip: text;
+				-webkit-background-clip: text;
 				-webkit-text-fill-color: map-get($value, gradient-fill-color);
 				@include mobile-only{
 					font-size: $mob-resto-font-size;
@@ -57,6 +57,6 @@
 @mixin gradient-color($resto-color){
 	background: $resto-color;
 	background-color: transparent; /*if gradient text not supported*/
-	background-clip: text;
+	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }

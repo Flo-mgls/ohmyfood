@@ -1,0 +1,42 @@
+@keyframes patience {
+	0% {
+		transform: translateY(50%);
+	}
+	25% {
+		transform: translateY(-75%);
+	}
+	50%,100% {
+		transform: translateY(50%);
+	}
+}
+
+.coming-soon{
+	@include main-look(2em);
+	width: max-content;
+	padding: 0.3em 1.5em;
+	border-radius: 0.5em;
+	margin: 0.5em auto 4em auto;
+	display: flex;
+	align-items: center;
+	@include mobile-only{
+		font-size: 1.5em;
+	}
+	& > p{
+		margin: 0 0.3em 0 0;
+	}
+	& > div{
+		background-color: rgb(251, 193, 56);
+		border-radius: 1em;
+		width: 0.3em;
+		height: 0.3em;
+		margin: 0 0.2em 0 0.2em;
+		&.point{
+			animation: patience 2000ms backwards infinite ease-in-out;
+			@for $i from 1 through 3 {
+				&--#{$i} {
+					animation-delay: 150ms * $i;
+				}
+			}
+		}
+	}
+}

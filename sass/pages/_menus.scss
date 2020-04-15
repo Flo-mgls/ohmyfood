@@ -16,6 +16,9 @@
 			text-align: center;
 			margin-top: 0;
 		}
+		ul{
+			padding: 0;
+		}
 		.flex{
 			display: flex;
 			justify-content: space-between;
@@ -49,10 +52,7 @@
 					left: 0;
 					background: $underlined-dish;
 				}
-			}
-			ul{
-				padding: 0;
-			}
+			}	
 			p{
 				font-size: 1em;
 				@include mobile-only{
