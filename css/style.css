@@ -226,17 +226,17 @@ footer p {
   width: 100%;
   height: 100%;
 }
-.all-menus article a .menu {
+.all-menus article a div {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.all-menus article a .menu--note {
+.all-menus article a div.menu--note {
   background-color: #f7e0dc;
 }
-.all-menus article a .menu--note h2 {
+.all-menus article a div.menu--note h2 {
   font: 2em "devonshire", cursive;
   border: 1px solid #f7e0dc;
   /*fix the problem of grandient bg when hover (border visible)*/
@@ -247,23 +247,23 @@ footer p {
   -webkit-text-fill-color: initial;
 }
 @media all and (max-width: 767px) {
-  .all-menus article a .menu--note h2 {
+  .all-menus article a div.menu--note h2 {
     font-size: 1.3em;
   }
 }
-.all-menus article a .menu--note h3 {
+.all-menus article a div.menu--note h3 {
   font: italic 2.5em "handlee", cursive;
   color: black;
 }
 @media all and (max-width: 767px) {
-  .all-menus article a .menu--note h3 {
+  .all-menus article a div.menu--note h3 {
     font-size: 1.8em;
   }
 }
-.all-menus article a .menu--chic {
+.all-menus article a div.menu--chic {
   background-color: #fdf5fd;
 }
-.all-menus article a .menu--chic h2 {
+.all-menus article a div.menu--chic h2 {
   font: 2em "croissant one", cursive;
   border: 1px solid #fdf5fd;
   /*fix the problem of grandient bg when hover (border visible)*/
@@ -274,23 +274,23 @@ footer p {
   -webkit-text-fill-color: transparent;
 }
 @media all and (max-width: 767px) {
-  .all-menus article a .menu--chic h2 {
+  .all-menus article a div.menu--chic h2 {
     font-size: 1.3em;
   }
 }
-.all-menus article a .menu--chic h3 {
+.all-menus article a div.menu--chic h3 {
   font: 2.5em "Times New Roman", Times, serif;
   color: #bc772f;
 }
 @media all and (max-width: 767px) {
-  .all-menus article a .menu--chic h3 {
+  .all-menus article a div.menu--chic h3 {
     font-size: 1.8em;
   }
 }
-.all-menus article a .menu--delice {
+.all-menus article a div.menu--delice {
   background-color: #f9f9f9;
 }
-.all-menus article a .menu--delice h2 {
+.all-menus article a div.menu--delice h2 {
   font: 2em "dancing script", cursive;
   border: 1px solid #f9f9f9;
   /*fix the problem of grandient bg when hover (border visible)*/
@@ -301,23 +301,23 @@ footer p {
   -webkit-text-fill-color: transparent;
 }
 @media all and (max-width: 767px) {
-  .all-menus article a .menu--delice h2 {
+  .all-menus article a div.menu--delice h2 {
     font-size: 1.3em;
   }
 }
-.all-menus article a .menu--delice h3 {
+.all-menus article a div.menu--delice h3 {
   font: italic 2.5em "handlee", cursive;
   color: #3987f3;
 }
 @media all and (max-width: 767px) {
-  .all-menus article a .menu--delice h3 {
+  .all-menus article a div.menu--delice h3 {
     font-size: 1.8em;
   }
 }
-.all-menus article a .menu--palette {
+.all-menus article a div.menu--palette {
   background-color: #fdfffd;
 }
-.all-menus article a .menu--palette h2 {
+.all-menus article a div.menu--palette h2 {
   font: italic 2em "handlee", cursive;
   border: 1px solid #fdfffd;
   /*fix the problem of grandient bg when hover (border visible)*/
@@ -328,36 +328,36 @@ footer p {
   -webkit-text-fill-color: transparent;
 }
 @media all and (max-width: 767px) {
-  .all-menus article a .menu--palette h2 {
+  .all-menus article a div.menu--palette h2 {
     font-size: 1.3em;
   }
 }
-.all-menus article a .menu--palette h3 {
+.all-menus article a div.menu--palette h3 {
   font: italic 2.5em "handlee", cursive;
   color: #84bc62;
 }
 @media all and (max-width: 767px) {
-  .all-menus article a .menu--palette h3 {
+  .all-menus article a div.menu--palette h3 {
     font-size: 1.8em;
   }
 }
-.all-menus article a .menu > div {
+.all-menus article a div > div {
   transition: transform 400ms ease-in-out, opacity 300ms 100ms;
 }
-.all-menus article a .menu > div:hover {
+.all-menus article a div > div:hover {
   transform: scale(1.1);
   opacity: 0.7;
 }
-.all-menus article a .menu > h2 {
+.all-menus article a div > h2 {
   padding: 0 1em 0 1em;
   margin: 0em auto 0em auto;
   color: black;
   text-align: center;
 }
-.all-menus article a .menu > h3 {
+.all-menus article a div > h3 {
   text-align: center;
 }
-.all-menus article a .menu > img {
+.all-menus article a div > img {
   margin: 0 auto 0.5em auto;
   width: 4em;
   height: 4em;
